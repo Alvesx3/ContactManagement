@@ -1,0 +1,27 @@
+﻿@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Contact</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="cliente.Name"></label>
+        <input asp-for="cliente.Name" class="form-control" />
+        <span asp-validation-for="cliente.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="cliente.ContactNumber"></label>
+        <input asp-for="cliente.ContactNumber" class="form-control" />
+        <span asp-validation-for="cliente.ContactNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="cliente.Email"></label>
+        <input asp-for="cliente.Email" class="form-control" />
+        <span asp-validation-for="cliente.Email" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="./Index">Back to List</a>
+</form>
